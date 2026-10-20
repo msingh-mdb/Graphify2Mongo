@@ -23,12 +23,16 @@ Sample output file is attached [graphifyoutput.json](graphifyoutput.json)
 
 ## Convert Graphify out to MongoDB collections
 Sample python script is attached [load2Mongo.py](load2Mongo.py)
+
 Update the filename for Graphify output file (format matter, code is centered around sample output format)
-Add your MongoDB connect string `MONGODB_URI` 
-Default DB name will be `payment_graph`, and it will create 2 collections `entities` and `relationships`
+
+Add your MongoDB connection string `MONGODB_URI` 
+
+By default DB name will be `payment_graph`, and it will create 2 collections `entities` and `relationships`
+
 Script will create indexes on `relationships` collection (indexes that support our demo use case)
 
-Below is sample from the collection in MonoDB
+Below is sample data from the collection in MonoDB
 ```
 // entities
 {
