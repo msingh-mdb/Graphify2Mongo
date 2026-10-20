@@ -60,8 +60,8 @@ Below is sample from the collection in MonoDB
 }
 ```
 
-## $graphlookup aggregation pipeline 
-Graphlookup up to 10 hops, sorted by hops
+## $graphLookup aggregation pipeline 
+graphLookup up to 10 hops, sorted by hops
 ```
 db.entities.aggregate([
   { $match: { _id: "payment:pay-1001" } },
@@ -72,7 +72,7 @@ db.entities.aggregate([
       connectToField: "from",
       connectFromField: "to",
       as: "Edges",
-      maxDepth: 10,
+      maxDepth: 10, 
       depthField: "hop",
       restrictSearchWithMatch: {
         graph: "payment-trace",
